@@ -39,13 +39,13 @@ router.post('/api/users/signup', [
     const userJwt = jwt.sign({
       id: user.id,
       email: user.email
-    }, 'asdf');
+    }, process.env.JWT_KEY!); // your 256-bit-secret
 
     // Store it on session object
     req.session = {
       jwt: userJwt
     };
-    
+
     res.status(201).send(user);
 });
 
