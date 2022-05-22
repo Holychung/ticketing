@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
         - name: auth
-          image: gcr.io/ticketing-dev-349803/auth
+          # image: gcr.io/ticketing-dev-349803/auth
+          image: holyrepaer/auth
           env:
             - name: JWT_KEY
               valueFrom:
