@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: holyrepaer/client
+          image: holyrepaer/ticketing-client
 ---
 apiVersion: v1
 kind: Service

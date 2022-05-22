@@ -19,7 +19,7 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-    - image: holyrepaer/client
+    - image: holyrepaer/ticketing-client
       context: client
       docker:
         dockerfile: Dockerfile

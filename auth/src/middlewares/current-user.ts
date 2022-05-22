@@ -19,6 +19,8 @@ export const currentUser = (
   res: Response,
   next: NextFunction
 ) => {
+  console.log("req.session")
+  console.log(req.session)
   if (!req.session?.jwt) {
     return next();
   }
@@ -28,6 +30,8 @@ export const currentUser = (
       req.session.jwt,
       process.env.JWT_KEY!
     ) as UserPayload;
+    console.log("payload")
+    console.log(payload)
     req.currentUser = payload;
   } catch (err) {}
   
