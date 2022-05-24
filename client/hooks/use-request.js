@@ -10,7 +10,6 @@ const useRequest = ({ url, method, body, onSuccess }) => {
       const response = await axios[method](url, body);
 
       if (onSuccess) {
-        console.log(response)
         onSuccess(response.data);
       }
 
